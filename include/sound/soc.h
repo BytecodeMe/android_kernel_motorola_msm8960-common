@@ -751,7 +751,10 @@ struct snd_soc_dai_link {
 	const char *cpu_dai_name;
 	const char *codec_dai_name;
 
+	unsigned int dai_fmt;           /* format to set on init */
+
 	struct snd_soc_dsp_link *dsp_link;
+
 	/* Keep DAI active over suspend */
 	unsigned int ignore_suspend:1;
 
