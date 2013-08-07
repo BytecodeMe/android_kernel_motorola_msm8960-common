@@ -2511,7 +2511,7 @@ int snd_soc_codec_writable_register(struct snd_soc_codec *codec,
 }
 EXPORT_SYMBOL_GPL(snd_soc_codec_writable_register);
 
-unsigned int snd_soc_platform_read(struct snd_soc_platform *platform,
+int snd_soc_platform_read(struct snd_soc_platform *platform,
 					unsigned int reg)
 {
 	unsigned int ret;
@@ -2524,7 +2524,7 @@ unsigned int snd_soc_platform_read(struct snd_soc_platform *platform,
 }
 EXPORT_SYMBOL_GPL(snd_soc_platform_read);
 
-unsigned int snd_soc_platform_write(struct snd_soc_platform *platform,
+int snd_soc_platform_write(struct snd_soc_platform *platform,
 					 unsigned int reg, unsigned int val)
 {
 	dev_dbg(platform->dev, "write %x = %x\n", reg, val);
